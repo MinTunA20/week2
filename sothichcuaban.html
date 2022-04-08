@@ -3,56 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>SỞ THÍCH</title>
-    <style>.a {background-color:orange; }
-    .b {color: orange}
-    .c {color: blue}
-    h4 {color: white}
-    .borderall{
+    <style>.a {
+        background-color: orange;
+    }
+
+    .b {
+        color: orange
+    }
+
+    .c {
+        color: blue
+    }
+
+    h4 {
+        color: white
+    }
+
+    .borderall {
         border: solid 2px green;
     }
     </style>
 </head>
 <body>
 <table class="borderall">
-    <tr>
-        <th colspan="2" class="a"><strong><h4> SỞ THÍCH CỦA BẠN </h4> </strong> <br></th>
+    <tr width="50px" height="100px" style="...">
+        <th colspan="2" class="a"><strong><h4> SỞ THÍCH CỦA BẠN </h4></strong> <br></th>
 
     </tr>
-    <tr><td class="c"> Họ và tên</td>
+    <tr>
+        <td class="c"> Họ và tên</td>
         <td>
             <input name="Họ Và Tên" type="text" size="40"/>
-        </td></tr>
+        </td>
+    </tr>
     <tr>
         <td class="c">Email</td>
-        <td> <input name="Email" type="text" size="40"/></td>
+        <td><input name="Email" type="text" size="40"/></td>
     </tr>
     <tr>
         <td class="c">Sở thích</td>
         <td>
             <table class="b">
-                <tr> <td><label> <input type="checkbox"/> Thể thao</label> </td>
+                <tr>
+                    <td><label> <input type="checkbox"/> Thể thao</label></td>
                     <td><label><input type="checkbox"/> Lướt web </label></td>
                     <td><label><input type="checkbox"/> Du lịch</label></td>
                 </tr>
-                <tr><td><label> <input type="checkbox"/> Âm nhạc</label> </td>
+                <tr>
+                    <td><label> <input type="checkbox"/> Âm nhạc</label></td>
                     <td><label><input type="checkbox"/> Chơi game </label></td>
                 </tr>
-                <tr><td><label> <input type="checkbox"/> Đọc sách</label> <br/></td>
+                <tr>
+                    <td><label> <input type="checkbox"/> Đọc sách</label> <br/></td>
                     <td><label><input type="checkbox"/> Điện ảnh </label></td>
                 </tr>
             </table>
         </td>
-        </tr>
-        <tr></tr>
-        <td>
-        <td> <input type="submit" value="Gửi lại thông tin"> <input type="submit" value="Nhập lại"></td>
-        </td>
     </tr>
-
+    <tr></tr>
+    <td>
+    <td><input type="submit" value="Gửi lại thông tin"> <input type="submit" value="Nhập lại"></td>
+    </td>
+    </tr>
 </table>
-
-
-
-
+<button onclick="alert('Xin chào bạn!');">Click me</button>
 </body>
 </html>

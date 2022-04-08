@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ketqua</title>
+</head>
+<body>
+<table>
+    <tr>
+       <th>Nhập số 1</th>
+        <th ><input id="a1" type="number" /></th>
+    </tr>
+    <tr>
+        <th size="">Mã số</th>
+        <th ><select id="a2"  type="number" name="số">
+            <option value= "5" >5</option>
+            <option value= "6" >6</option>
+            <option value= "7" >7</option>
+            <option value= "8" >8</option>
+            </select>
+        </th>
+    </tr>
+    <button align="center" onclick="a();">Kết quả</button>
+</table>
+    <script>
+        function a(){
+            alert("Kết quả là"+ document.getElementById("a1").value
+                * document.getElementById("a2").value);
+        }
+    </script>
+</body>
+</html>
