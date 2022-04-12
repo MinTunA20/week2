@@ -1,1 +1,4 @@
-alert(' hellllllo')
+
+function a(){
+    alert('Xin chào bạn!')
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+        <td>
+            <form> Amount <br>
+                <input id="amt" name="amount" type="number"/>
+            </form>
+        </td>
+        <td>FromCurrency <br>
+            <select id="Fr" name="FromCurrency">
+                <option value="1">VND</option>
+                <option value="23000">USD</option>
+                <option value="181">Yen</option>
+                <option value="435">Peso</option>
+            </select>
+        </td>
+        <td> ToCurrencey <br>
+            <select id="To" name="ToCurrencey">
+            <option value="1">VND</option>
+            <option value="23000">USD</option>
+            <option value="181">Yen</option>
+            <option value="435">Peso</option>
+        </select>
+    </td>
+</table>
+<button type="button"  onclick="a()">Đổi tiền</button>
+</body>
+</html>
+<script>
+    function a() {
+       let x=(document.getElementById("amt").value * document.getElementById("Fr").value / document.getElementById("To").value);
+        alert(x);
+    }
+</script>
