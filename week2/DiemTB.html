@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điểm trung bình của học sinh</title>
+</head>
+<body>
+<table>
+    <td>Điểm toán<input name="Điểm toán" type="number" id="dt"/></td><br>
+    <td>Điểm lý<input name="Điểm lý" type="number" id="dl"/> </td><br>
+    <td>Điểm hóa<input name="Điểm hóa" type="number" id="dh"/> </td>
+    <td> <button type="button" onclick="a()">Điểm trung bình</button></td>
+</table>
+</body>
+</html>
+<script>
+    function a()    {let x=document.getElementById("dt").value
+                    let y=document.getElementById("dl").value
+                    let z=document.getElementById("dh").value
+                    alert(x/3+y/3+z/3);
+                    }
+</script>
