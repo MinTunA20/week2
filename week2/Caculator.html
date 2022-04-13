@@ -2,13 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Máy tính</title>
 </head>
-<body>
-<tr>
-    <form>
-        <input type="checkbox"
-    </form> </tr>
 
+<body>
+<style>
+    td{
+        width: 50px;
+        height: 50px;
+        margin: 15px;
+        border-radius: 50%;
+        border-width: 0;
+        font-weight:bold;
+        font-size:16px;;
+    }
+    input{
+        width: 50px;
+        height: 50px;
+        margin: 15px;
+        color: blue;
+        font-weight: bold;
+
+    }
+    #display{
+        width: 200px;
+        height: 50px;
+        text-align: right;
+        font-weight: bolder;
+    }
+
+</style>
+<table frame="box">
+    <tr>
+        <th colspan="4" id="box"><input id="display" type="text"></th>
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="clickNumber(1)" ></td>
+        <td><input type="button" value="2" onclick="clickNumber(2)"></td>
+        <td><input type="button" value="3" onclick="clickNumber(3)"></td>
+        <td><input type="button" value="+"onclick="clickNumber('+')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="clickNumber(4)"></td>
+        <td><input type="button" value="5" onclick="clickNumber(5)"></td>
+        <td><input type="button" value="6" onclick="clickNumber(6)"></td>
+        <td><input type="button" value="-"  onclick="clickNumber('-')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="clickNumber(7)"></td>
+        <td><input type="button" value="8" onclick="clickNumber(8)"></td>
+        <td><input type="button" value="9" onclick="clickNumber(9)"></td>
+        <td><input type="button" value="*" onclick="clickNumber('*')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="C" onclick="clearDisplay()"></td>
+        <td><input type="button" value="0" onclick="clickNumber(0)"></td>
+        <td><input type="button" value="=" onclick="bang()"></td>
+        <td><input type="button" value="/" onclick="clickNumber('/')"></td>
+    </tr>
+</table>
 </body>
 </html>
+
+<script>
+    function clickNumber(number) {
+        document.getElementById('display').value += number
+    }
+
+    function clearDisplay() {
+        document.getElementById('display').value =  '';
+    }
+
+    function bang() {
+        let value = document.getElementById('display').value;
+        document.getElementById('display').value = eval(value);
+    }
+
+</script>
