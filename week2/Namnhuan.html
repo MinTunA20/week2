@@ -1,0 +1,55 @@
+
+<!--Trong phần này, chúng ta sẽ phát triển một ứng dụng nhằm kiểm tra xem một năm có phải là năm nhuận hay không.-->
+
+<!--Ứng dụng cho phép người dùng nhập vào một năm, sau đó sẽ đưa ra thông báo là năm đó là năm nhuận hay không phải là năm nhuận.-->
+
+<!--Năm nhuận là một năm đặc biệt, được cộng thêm một ngày để giữ cho lịch được đồng bộ với lịch thiên văn.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Năm nhuận</title>
+</head>
+<body>
+<h1>XÁC ĐỊNH NĂM NHUẬN</h1>
+<input placeholder="Xac dinh nam nhuan" size="50" id="nn"/>
+<input  type="button" onclick="ktnn() " value="kiem tra"></br>
+<input id="KT" style="border: none" >
+</body>
+</html>
+<script>
+        // let a =prompt("Nhập năm cần xác định");
+        // let a4 = a%4;
+        // let a100 = a%100;
+        // let a400 = a%400;
+        // if (a4!==0) {document.write("Không phải năm nhuận")}
+        // else if (a100!==0) {document.write("Là năm nhuận")}
+        // // Những năm chia hết cho 4 mà không chia hết cho 100 là năm nhuận
+        //     else if (a400!==0) {document.write("Không phải năm nhuận")}
+        // // Những năm chia hết cho 100 mà không chia hết cho 400 thì KHÔNG PHẢI là năm nhuận
+        //         else {document.write("là năm nhuận")}
+
+        function a(id) {
+            return document.getElementById(id);
+        }
+        function ktnn() {
+
+            if(a("nn").value % 4 ==0){
+                if(a("nn").value %100==0){
+                    if(a("nn").value %400==0){
+                        a("KT").value = "nam nhuan"
+                    }
+                    else {
+                        document.write("ko phai nn");
+                    }
+                }
+                else {
+                    a("KT").value = "nam nhuan"
+                }
+            }
+            else {
+                document.write("ko phai nam nhuan")
+            }
+        }
+
+</script>
