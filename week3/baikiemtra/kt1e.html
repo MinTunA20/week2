@@ -19,9 +19,8 @@
         let a = +document.getElementById('a').value
         let b = +document.getElementById('b').value
         let c = +document.getElementById('c').value
-        if ((a+b)<=c || (b+c)<=a || (a+c)<=b) {
-            alert("a,b,c không là 3 cạnh của 1 tam giác");}
-        else {
+        if ((a+b)>c && (b+c)>a && (a+c)>b) {
+            alert("a,b,c là 3 cạnh của 1 tam giác");
             if (a == b && b == c && a > 0) {
                 alert("a,b,c là 3 cạnh của tam giác đều")
             }
@@ -32,5 +31,6 @@
                 alert(' a,b,c là 3 cạnh của tam giác vuông')
             }
         }
+        else alert('3 cạnh a, b, c không là 3 cạnh của tam giác')
         }
 </script>

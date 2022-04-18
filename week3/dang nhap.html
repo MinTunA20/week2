@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>User:  <input type="text" id="user"/></tr><br>
+    <tr>Password: <input type="password" id="pass"/></tr><br>
+    <td><button type="button" onclick="login()">Login</button></td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+    function login(){
+        let a=document.getElementById('user').value
+        let b=document.getElementById('pass').value
+        if (a==='toan' && b==='123456'){alert('Đăng nhập thành công')}
+        else {alert('Sai rồi nhé')}
+    }
+</script>
