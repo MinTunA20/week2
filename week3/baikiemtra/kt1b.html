@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh binh phuong</title>
+</head>
+<body>
+<h1>Tính bình phương</h1>
+<table>
+    <tr><td>Nhập a = <input type="number" id="a"/></td>
+        <td><button type="button" onclick="a2()"> a^2 = </button></td></tr><br>
+    <tr>
+        <td>Nhập b = <input type="number" id="b"/></td><br>
+        <td><button type="button" onclick="b2()"> b^2 = </button></td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+    function a2() { let aa= document.getElementById("a").value*document.getElementById("a").value;
+        alert(aa);}
+    function b2(){let bb = document.getElementById("b").value * document.getElementById("b").value;
+                alert(bb);
+        }
+</script>

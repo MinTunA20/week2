@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thế kỷ</title>
+</head>
+<body>
+<h1>Tính thế kỷ</h1>
+<table>
+    Nhập năm = <input type="number" id="a"/><br>
+    <td><button type="button" onclick="ab()">Thế kỷ </button></td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+    function ab() {let aa=Math.floor(document.getElementById('a').value /100)
+        if (document.getElementById('a').value %100===0) {alert("năm "+ document.getElementById('a').value +" thuộc thế kỷ thứ "+aa)}
+        else {let ac=Math.floor(document.getElementById('a').value /100)+1
+            alert("năm "+document.getElementById('a').value+" thuộc thế kỷ thứ "+ ac)}
+    }
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="anh1" src="1.jpg" width="200px" height="200px" onclick="doihinh()"></br>
+<img src="ro.jpg" id="anh2" width="200px" height="200px"  onclick="dh2()" >
+
+</body>
+</html>
+<script>
+
+    let count=1;
+    let count2=2
+    function a(id) {
+        return document.getElementById(id);
+    }
+    function doihinh() {
+        if (count==1){
+            a("anh1").src = "1.png";
+            count = 2;
+        }
+        else {
+            a("anh1").src= "1.png"
+            count=1;
+        }
+        if(count === count2){
+            alert("win");
+        }
+    }
+    function dh2() {
+        if(count2==2){
+            a("anh2").src="2.png"
+            count2 =1;
+        }
+        else {
+            a("anh2").src="2.png"
+            count2=2
+        }
+        if(count === count2){
+            alert("win");
+        }
+    }
+
+</script>
