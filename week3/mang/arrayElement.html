@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8 />
+    <title>JS Bin</title>
+    <style>
+        body {padding-top:50px}
+    </style>
+</head>
+<body>
+<input type="text" id="a"/>
+<button type="button" onclick="ad()" > Add </button>
+<button type="button" onclick="dis()" > Display </button><br>
+<h2 id="display1"></h2>
+</body>
+</html>
+<script>
+    let arr=[];
+    function ad() {
+        let a1=document.getElementById('a').value
+        arr.push(a1);
+
+        // let b="</hr>"
+        // for (let i=0; i<arr.length;i++){
+        //     b +=arr[i] + "</br>";
+        // }
+        document.getElementById("display1").innerHTML += arr[arr.length-1] + "</br>";
+    }
+    function dis(){
+        let a1=document.getElementById('a').value
+        arr.pop(a1);
+        let b="</hr>"
+        for (let i=0; i<arr.length;i++){
+            b +=arr[i] + "</br>";
+        }
+        document.getElementById("display1").innerHTML = b;
+    }
+</script>
