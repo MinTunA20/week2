@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="anh" placeholder="ex: tree..."/>
+<button type="button" onclick="checkit()">Translate</button>
+<h2 id="ba"></h2>
+</body>
+</html>
+<script>
+    function checkit(){
+        let tienganh =['tree', 'house', 'bird', 'fish', 'car']
+        let tiengviet =['cây', 'nhà', 'chim', 'cá', 'ô tô' ]
+        let tu=document.getElementById('anh').value
+        let b='</hr>'
+        for (let i=0; i<tienganh.length; i++){
+            if (tu==tienganh[i]){
+                b+=(tiengviet[i])
+                document.getElementById("ba").innerHTML= b
+                break;
+            }
+            else if (i==tienganh.length-1) {alert('Không có từ này')}
+        }
+    }
+</script>
