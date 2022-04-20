@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>[3, 5, 6, v, d, s, g, e]</h2>
+<input type="text" id="a" placeholder="viết vào đây"/>
+<button type="button" onclick="checkit()" > Kiểm tra nào</button>
+</body>
+</html>
+<script>
+    let arr=[3,5,6,'v','s','b','g'];
+    function checkit() {
+        let b = document.getElementById('a').value
+        for (let i = 0; i < arr.length; i++) {
+            if (b == arr[i]) {i++;
+                alert('phần tử ' + b + ' thuộc mảng và đứng vị trí thứ ' + i + ' trong mảng')
+            }
+        }
+    }
+</script>

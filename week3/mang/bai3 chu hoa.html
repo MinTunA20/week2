@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let nhap = prompt()
+    let upper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    let lower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    let arr = nhap.split('')
+    let arr2 = ''
+    let arr1 = new Array(arr.length);
+    console.log(arr)
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < upper.length; j++) {
+            if (arr[i] == upper[j]) {
+                arr1[i] = lower[j]
+            }
+        }
+        for (let k = 0; k < lower.length; k++) {
+            if (arr[i] == lower[k]) {
+                arr1[i] = upper[k]
+            }
+        }
+        if (arr[i] === " ") {
+            arr1[i] = arr[i]
+        }
+    }
+    console.log(arr1)
+    for (let l = 0; l < arr1.length; l++) {
+        arr2 += arr1[l]
+    }
+    console.log(arr2)
+
+</script>
