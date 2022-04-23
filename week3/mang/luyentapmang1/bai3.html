@@ -1,0 +1,25 @@
+<!--Bài 3- Viết chương trình khởi tạo mảng số nguyên. -->
+<!--Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr=[5,65,42,1,2,6,455,8,3,10]
+    let max=arr[0]
+    let sum=0
+    for (let i=1; i<arr.length;i++){
+        if (arr[i]>max) {
+            max=arr[i]
+        }
+        sum+=arr[i];
+    }
+    console.log(max)
+    console.log(sum/(arr.length-1))
+</script>

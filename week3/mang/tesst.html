@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let b = parseInt(prompt())
+    function checksnt(a){
+        // for (let i=2;i<=(a/2);i++) {
+        //     if (a%i==0) {alert(a + ' khong la snt')
+        //         break;}
+        //     else (alert(a+' La so nguyen to'))
+        //     break;
+        // }
+        if (a==2) {return false}
+           else for (let i=2; i<=a/2;i++) {
+               if (a%i==0) { return false}
+            }
+        return true;
+    }
+
+    console.log(checksnt(b))
+</script>

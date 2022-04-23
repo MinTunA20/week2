@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr = [4, 2, -1, -6, 4, -7]
+    let V = prompt()
+    let temp
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] == V) {
+            console.log('V is in the array ')
+            for (let j=i;j<arr.length;j++){
+            arr[j]=arr[j+1];} arr.pop()
+        }
+    }
+    console.log(arr)
+</script>
