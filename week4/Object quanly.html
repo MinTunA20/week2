@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {
+            color: seagreen;
+        }
+
+        tr:nth-child(odd) {
+            background: chocolate;
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+<h1> QUẢN LÝ HỌC VIÊN CODE GYM</h1><br>
+    <a href="https://codegym.vn/"><img src="cg.jpg" width="600px" height="200px"></a>
+
+<br>
+<br>
+<table>
+        <td><input type="text" id="namez" placeholder="Họ và tên"><br><br>Họ và tên</td>
+        <td><input type="date" id="bornz" placeholder="ngày sinh"><br><br>Ngày sinh</td>
+        <td><input type="text" id="sexz" placeholder="nam/nữ"><br><br>Giới tính</td>
+        <td><input type="text" id="phonez" placeholder="số điện thoại"><br><br>Số điện thoại</td>
+        <td><button type="button" id="add" onclick="add()">Thêm</button></td>
+        <td><button type="button" id="edit" onclick="saveEdit()">Chỉnh sửa</button></td>
+</table>
+<table id="display" style="width: 70%; text-align: center"></table>
+</div>
+</body>
+</html>
+<script>
+    class Students {
+        name
+        born
+        sex
+        phone
+        constructor(name,born,sex,phone){
+            this.name=name;
+            this.born=born;
+            this.sex=sex;
+            this.phone=phone;
+
+        }
+    }
+
+    let students = [new Students("Harry Potter","20/05/1996","nam","123-456-789")]
+show();
+
+function add(){
+    let name = document.getElementById('namez').value;
+    let born = document.getElementById('bornz').value;
+    let sex = document.getElementById('sexz').value;
+    let phone = document.getElementById('phonez').value;
+    students.push(new Students(name,born,sex,phone));
+    console.log(students)
+    show();
+}
+function show() {
+    let str = ""
+    for (let i = 0; i < students.length; i++) {
+        str += "<tr>"
+        str += `<td>${i + 1}</td>`
+        str += `<td>${students[i].name}</td>`
+        str += `<td>${students[i].born}</td>`
+        str += `<td>${students[i].sex}</td>`
+        str += `<td>${students[i].phone}</td>`
+        str += `<td><button onclick="showEdit(${i})">Edit</button></td>`
+        str += `<td><button onclick="deleteP(${i})">Delete</button></td>`
+        str += "</tr>"
+    }
+    document.getElementById('display').innerHTML= str;
+}
+    let indexEdit = -1;
+
+    function showEdit(index) {
+        document.getElementById('namez').value = students[index].name;
+        document.getElementById('bornz').value = students[index].born;
+        document.getElementById('sexz').value = students[index].sex;
+        document.getElementById('phonez').value = students[index].phone;
+        indexEdit = index;
+    }
+
+    function saveEdit() {
+        let name = document.getElementById('namez').value;
+        let born = document.getElementById('bornz').value;
+        let sex = document.getElementById('sexz').value;
+        let phone = document.getElementById('phonez').value;
+
+       students[indexEdit] = new Students(name,born,sex,phone);
+        show();
+        indexEdit = -1;
+    }
+
+    function deleteP(index) {
+        students.splice(index, 1);
+        show();
+    }
+
+</script>

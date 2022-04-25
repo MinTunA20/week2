@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="nhap"/> <br>
+<button type="button" onclick="FootToMeter()">Foot To Meter</button>
+<button type="button" onclick="MeterToFoot()">Meter To Foot</button>
+</body>
+</html>
+<script>
+    let a=document.getElementById('nhap')
+    function FootToMeter(){
+        let meter=(a.value)*0.305
+        alert(meter + 'm')
+    }
+
+    function MeterToFoot(){
+        let foot=(a.value)*3.279
+        alert(foot +'f')
+    }
+</script>

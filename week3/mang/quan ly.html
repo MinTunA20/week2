@@ -1,88 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<meta charset="UTF-8">
+<title>Title</title>
+<style>
+    h1 {
+        color: red;
+    }
 
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        h1{
-            color: red;
-        }
-
-        tr:nth-child(odd){
-            background: antiquewhite;
-        }
-        button{ background-color: burlywood}
-    </style>
+    tr:nth-child(odd) {
+        background: antiquewhite;
+    }
+</style>
 </head>
 <body>
 <div align="center">
     <h1>Manager product</h1>
-    <input placeholder="name Product" id="nameP">
-    <input type="image" id="img">
+    Name product: <input placeholder="name Product" name="abc" id="nameP">
+    <br>
+    <br>
+    Image product:<input placeholder="image" id="img">
+    <br>
+    <br>
+    Price product:<input placeholder="Price" id="price">
+    <br>
+    <br>
     <button onclick="create()">Add Product</button>
     <button onclick="saveEdit()">Edit Product</button>
     <br>
     <br>
-    <table id="display" style="width: 50%; text-align: center">
+    <table id="display" style="width: 70%; text-align: center">
 
     </table>
 </div>
 </body>
 </html>
 <script>
-    let products = ["BMW"]
-        productsimg = []
+    class Product {
+        name
+        img
+        price
+        constructor(name, img, price) {
+            this.name = name;
+            this.img = img;
+            this.price = price;
+        }
+    }
+
+
+    let products = [new Product("BMW","https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2022-bmw-alpina-b8-gran-coupe-4-1646929819.jpg?crop=0.670xw:0.670xh;0.162xw,0.162xh&resize=640:*",50000)]
+
 
     function create() {
         let name = document.getElementById('nameP').value;
-        products.push(name);
-        console.log(products);
-        productsimg.push(<img src=""/>);
+        let img = document.getElementById('img').value;
+        let price = document.getElementById('price').value;
+        products.push(new Product(name,img,price));
+        console.log(products)
         show();
     }
 
-    function show() {
-        let str = "";
-        for (let i = 0; i < products.length; i++) {
-            str += "<tr>"
-            str += `<td>${i + 1}</td>`
-            str += `<td>${products[i]}</td> <td>${productsimg[i]}</td>`
-            str += `<td><button onclick="showEdit(${i})">Edit</button></td>`
-            str += `<td><button onclick="deleteP(${i})">Delete</button></td>`
-            str += "</tr>"
-        }
-        document.getElementById("display").innerHTML = str;
+
+    for (let i = 0; i < products.length; i++) {
+        str += "<tr>"
+        str += `<td>${i + 1}</td>`
+        str += `<td>${products[i].name}</td>`
+        str += `<td>${products[i].price}</td>`
+        str += `<td><img src="${products[i].img}" width="220" height="170"></td>`
+        str += `<td><button onclick="showEdit(${i})">Edit</button></td>`
+        str += `<td><button onclick="deleteP(${i})">Delete</button></td>`
+        str += "</tr>"
+
     }
 
     let indexEdit = -1;
+
     function showEdit(index) {
-        document.getElementById('nameP').value = products[index];
-        document.getElementById('img').value = products[index];
+        document.getElementById('nameP').value = products[index].name;
+        document.getElementById('img').value = products[index].img;
+        document.getElementById('price').value = products[index].price;
         indexEdit = index;
     }
+
     function saveEdit() {
         let name = document.getElementById('nameP').value;
         let img = document.getElementById('img').value;
-        products[indexEdit] = name;
-        productsimg[indexEdit] = img;
+        let price = document.getElementById('price').value;
+
+        products[indexEdit] = new Product(name,img,price);
         show();
         indexEdit = -1;
     }
+
     function deleteP(index) {
-        products.splice(index,1);
-        productsimg.splice(index,1);
+        products.splice(index, 1);
         show();
     }
-
-    show();
-</script>
