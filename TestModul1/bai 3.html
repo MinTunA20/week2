@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    arr1=['a','b','c','d','e','f']
+    arr2=['c','d','e']
+    let cnt=0
+    function Checkarr(str1,str2) {
+        for (let i = 0; i < str1.length; i++) {
+                if (str1[i] == str2[cnt]) {
+                    cnt++;
+                } else if (str1[i] == str2[0]) {
+                    cnt = 1}
+                else {
+                    cnt = 0
+                }
+                if (cnt == str2.length) {
+                    return true;
+                }
+            }
+        return false
+    }
+     let aa=  Checkarr(arr1,arr2)
+    console.log(aa)
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr = prompt().split(",")
+    let a = 2
+
+    // Trả về mảng ban đầu đã được loại bỏ phần tử tại vị trí index nếu index hợp lệ.
+    //     Nếu index không hợp lệ, trả về mảng ban đầu.(không dùng hàm có sẵn để xoá mảng)
+
+    function tryRemoveFromArray(mang,index) {
+       if (index>=0 && index<mang.length) {
+           for (let i = index; i < mang.length; i++) {
+               mang[i]=mang[i+1]
+               }
+
+           }
+           console.log(mang)
+       }
+
+    let arr1=tryRemoveFromArray(arr,a)
+
+</script>
