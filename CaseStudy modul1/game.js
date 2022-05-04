@@ -25,7 +25,7 @@
         this.loop()
     }
 
-    this.loop =function() {
+    this.loop = function() {
         this.update();
         this.draw();
         console.log('loop')
@@ -33,7 +33,7 @@
         setTimeout(self.loop,33)
     }
 
-    this.update =function(){
+    this.update = function(){
         this.bird.update();
         this.bg.update();
     }
